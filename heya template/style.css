@@ -1,59 +1,96 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&family=Tajawal&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@500&family=Noto+Sans+Arabic&display=swap');
+
+:root {
+    --yellow: #e2bd46;
+}
 
 html {
-    font-family: 'Noto Sans Arabic', sans-serif;
-font-family: 'Tajawal', sans-serif;
+    font-family: 'El Messiri', sans-serif;
 }
 
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-.navbar {
-    background-color: #000;
-    color: #fff;
-    /* padding: 10px; */
+.container {
+    height: 100vh;
+    width: 100%;    
+}
+
+#section-one {
+    background-color: grey;
+    background-image: url(./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* z-index: 39; */
+    height: 87.5vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 12.5vh;
-    width: 100vw;
 }
 
-.navbar-left {
+.inner-section {
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    /* background-color: #e2bd46; */
+    border: 4px solid white;
     display: flex;
     flex-direction: row-reverse;
-    width: 80%;
-    margin: auto;
-    justify-content: space-between;
 }
 
-.navbar-left .links-right {
-    display:flex;
-    justify-content: space-evenly;
-    width: 50%;
+.inner-section .section-info {
+    width: 35%;
+    height: 100%;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-right: 5%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-.navbar-left .links-left {
-    display:flex;
-    justify-content: space-evenly;
-    width: 20%;
+.inner-section .section-info .section-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--yellow);
 }
 
-.navbar-left a {
-    color: #fff;
+.inner-section .section-info .section-body {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    align-content: center;
+}
+
+.section-info .section-body p {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    /* font-weight: bold; */
+}
+
+.section-info .section-body a {
     text-decoration: none;
-    font-size: 1.2rem;
+    color: white;
 }
 
-.navbar-right {
-    width: 15%;
+.section-body .btn {
+    background-color: var(--yellow);
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 50px;
+    font-size: .8rem;
+    padding: 2px 0px;
+    text-align: center;
 }
 
-.navbar-right .logo{ 
-    width:150px;
-    height: 50px;
-    background-color: gray;
+.section-body .btn:hover {
+    background-color: rgb(169, 139, 40);
+    color: #e2bd46;
 }
+
+
