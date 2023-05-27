@@ -33,16 +33,20 @@ body {
 
 .inner-section {
     width: 85%;
-    height: 80%;
+    height: 85.5%;
     margin: auto;
     /* background-color: #e2bd46; */
-    border: 4px solid white;
+    /* border: 4px solid white; */
+    background-image: url(./images/Untitled-1-07.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: row-reverse;
 }
 
 .inner-section .section-info {
-    width: 35%;
+    width: 37.5%;
     height: 100%;
     padding: 0 20px;
     background-color: rgba(255, 255, 255, 0.85);
@@ -54,7 +58,7 @@ body {
 }
 
 .inner-section .section-info .section-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: bold;
     color: var(--yellow);
 }
