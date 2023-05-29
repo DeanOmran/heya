@@ -25,6 +25,13 @@
     gap: 20px;
 }
 
+.link-item {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
 .navbar-left .links-left {
     display:flex;
     justify-content: space-evenly;
@@ -51,14 +58,19 @@
     height: 100%;
 }
 
-.navbar-left a:hover {
+.link-item:hover a {
     color: var(--yellow);
 }
 
 .link-pic {
-    width: 30px;
+    width: 45px;
+    display: none;
     /* height: 30px;    */
 }
+
+/* .link-item:hover .link-pic {
+    display: block;
+}    */
 
 .footer {
     width: 100vw;
