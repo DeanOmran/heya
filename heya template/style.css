@@ -138,7 +138,7 @@ body {
     color: #e2bd46;
 }
 
-#latest-events {
+.latest-events {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -147,7 +147,7 @@ body {
     text-align: end;
 }
 
-#latest-events .section-body {
+.latest-events .section-body {
     display: flex;
     flex-direction: column;
     gap: 100px;
@@ -200,7 +200,7 @@ body {
     height: 175px;
 }
 
-#latest-drops {
+.latest-drops {
     background-color: #e2bd46;
     /* background-image: url(./images/Untitled-1-06.png); */
     background-repeat: no-repeat;
@@ -278,6 +278,15 @@ body {
 .drop-body .drop-info .single-info{
     font-size: 1.1rem;
     height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.single-info img{
+    width: 25px;
 }
 
 .single-info span {
@@ -293,13 +302,36 @@ body {
     font-size: 1rem;
     padding: 3px 0px;
     text-align: center;
-    margin-top: 50px;
     margin-right: 0;
 }
 
 .btn-white a {
     color: #e2bd46;
     text-decoration: none;
+}
+
+.drop-second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+}
+
+.other-drops {
+    display: flex;
+    justify-self: space-evenly;
+    /* padding: 50px 0 0 0; */
+}
+
+.other-drops .other-drop-items{
+    width: 15%;
+    margin: auto;
+}
+
+.other-drops img {
+    width: 100%;
 }
 
 
