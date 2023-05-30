@@ -150,7 +150,7 @@ body {
 .latest-events .section-body {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 75px;
     margin-top: 75px;
 }
 
@@ -220,11 +220,6 @@ body {
     align-items: center;
     gap: 75px;
     padding: 100px 0;
-    /* background-image: url(./images/white\ logo.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100%;
-    opacity: 0.4; */
     background-image: url(./images/Untitled-1-04.png);
     background-position: 90% 50%;
     background-repeat: no-repeat;
