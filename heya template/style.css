@@ -17,10 +17,10 @@ body {
 
 .container {
     height: 100vh;
-    width: 100%;    
+    width: 100%;
 }
 
-.section-title  {
+.section-title {
     font-size: 2rem;
     font-weight: bold;
     color: var(--yellow);
@@ -31,7 +31,7 @@ body {
     justify-content: center;
 }
 
-.section-title-white  {
+.section-title-white {
     font-size: 2rem;
     font-weight: bold;
     color: white;
@@ -43,7 +43,7 @@ body {
 }
 
 
-.section-title-white p{
+.section-title-white p {
     margin-bottom: -10px;
 
 }
@@ -51,7 +51,8 @@ body {
 .section-title-white img {
     width: 75px;
 }
-.section-title p{
+
+.section-title p {
     margin-bottom: -10px;
 
 }
@@ -63,7 +64,7 @@ body {
 #section-one {
     background-color: grey;
     background-image: url(./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg);
-    background-size:100%;
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
     /* z-index: 39; */
@@ -89,7 +90,7 @@ body {
     height: 100%;
     padding: 0 20px;
     background-color: rgba(255, 255, 255, 0.85);
-    margin-right: 5%;    
+    margin-right: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -161,7 +162,8 @@ body {
     margin: auto;
 }
 
-.event:nth-of-type(2n), .event:nth-of-type(2n) .event-image {
+.event:nth-of-type(2n),
+.event:nth-of-type(2n) .event-image {
     flex-direction: row-reverse;
 }
 
@@ -237,7 +239,7 @@ body {
 
 .drop-body .drop-title {
     color: white;
-    font-size: 1.75rem;
+    font-size: 1.85rem;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -257,9 +259,9 @@ body {
 
 .drop-image .main-image {
     width: 70%;
-    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
 }
 
 .drop-body .drop-info {
@@ -270,7 +272,7 @@ body {
     height: 20%;
 }
 
-.drop-body .drop-info .single-info{
+.drop-body .drop-info .single-info {
     font-size: 1.1rem;
     height: 40px;
     display: flex;
@@ -280,7 +282,7 @@ body {
     gap: 10px;
 }
 
-.single-info img{
+.single-info img {
     width: 25px;
 }
 
@@ -292,7 +294,7 @@ body {
 .btn-white {
     background-color: white;
     width: 120px;
-    margin: 0 ;
+    margin: 0;
     border-radius: 50px;
     font-size: 1rem;
     padding: 3px 0px;
@@ -320,7 +322,7 @@ body {
     /* padding: 50px 0 0 0; */
 }
 
-.other-drops .other-drop-items{
+.other-drops .other-drop-items {
     width: 15%;
     margin: auto;
 }
@@ -329,6 +331,127 @@ body {
     width: 100%;
 }
 
+
+.all-posts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: end; */
+    margin: 0 0 50px 0;
+    text-align: end;
+}
+
+.all-posts-link {
+    width: 80%;
+    margin: 0px auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.post-link-number {
+    border: 2px solid rgb(170, 170, 170);
+    padding: 5px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.all-posts a {
+    color: black;
+    text-decoration: none;
+}
+
+.arrow {
+    display: block;
+    float: right;
+    margin-top: .25em;
+    border-color: transparent;
+    border-top-color: #D00;
+    border-style: solid;
+    border-width: .5em .31em 0;
+    width: 0;
+    height: 0;
+    position: relative;
+    line-height: 0;
+}
+
+
+.arrow-left {
+    border-width: .60em .8em .60em .0;
+    border-top-color: transparent;
+    border-right-color: rgb(0, 0, 0);
+    margin-right: 10px;
+}
+
+.arrow-right {
+    border-width: .60em 0 .60em .8em;
+    border-top-color: transparent;
+    border-left-color: rgb(0, 0, 0);
+    margin-left: 10px;
+}
+
+.post-section {
+    width: 80%;
+    margin: auto;
+}
+
+.drop-item {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 75px;
+    padding: 100px 0;
+    background-image: url(./images/Untitled-1-04.png);
+    background-position: 90% 50%;
+    background-repeat: no-repeat;
+    background-size: 36%;
+}
+
+.drop-item-body {
+    text-align: right;
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+
+.drop-item-body .drop-title {
+    color: white;
+    font-size: 1.85rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.drop-item-image .main-image {
+    width: 70%;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.drop-item-body .drop-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    height: 20%;
+}
+
+.drop-item-body .drop-info .single-info {
+    font-size: 1.1rem;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
 
 
 
