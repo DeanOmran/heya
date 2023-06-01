@@ -226,6 +226,21 @@ body {
     background-position: 90% 50%;
     background-repeat: no-repeat;
     background-size: 36%;
+    position: relative;
+}
+
+.latest-drop::before {
+    content: "";
+    background-image: url(./images/white\ logo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
 }
 
 .latest-drop .drop-body {
@@ -235,6 +250,7 @@ body {
     flex-direction: column;
     justify-content: center;
     gap: 50px;
+    position: relative;
 }
 
 .drop-body .drop-title {
@@ -255,6 +271,7 @@ body {
 
 .drop-image {
     width: 48%;
+    position: relative;
 }
 
 .drop-image .main-image {
@@ -369,7 +386,7 @@ body {
     float: right;
     margin-top: .25em;
     border-color: transparent;
-    border-top-color: #D00;
+    /* border-top-color: #D00; */
     border-style: solid;
     border-width: .5em .31em 0;
     width: 0;
@@ -403,7 +420,7 @@ body {
 .posts-section .post-item {
     display: flex;
     align-items: center;
-    height: 80vh;
+    height: 90vh;
     width: 100%;
     justify-content: center;
     text-align: right;
@@ -413,13 +430,12 @@ body {
     background-size: 27%;
 }
 
-
-
 .post-drop-image {
     width: 37.5%;
     display: flex;
     justify-content: end;
     align-items: center;
+    position: relative;
 }
 
 .post-drop-image .main-image {
@@ -436,6 +452,7 @@ body {
     justify-content: center;
     gap: 50px;
     text-align: right;
+    position: relative;
 }
 
 .post-drop-body .drop-title{
@@ -488,6 +505,21 @@ body {
     background-position: 78% 50%;
     background-repeat: no-repeat;
     background-size: 27%;
+    position: relative; 
+}
+
+.post-item:nth-of-type(2n)::before {
+    content: "";
+    background-image: url(./images/white\ logo.png);
+    background-size: 85%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.1;
 }
 
 .post-item:nth-of-type(2n) .post-drop-body .drop-title {
