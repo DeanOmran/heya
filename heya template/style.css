@@ -77,17 +77,16 @@ body {
     height: 85.5%;
     margin: auto;
     border: 4px solid white;
+    display: flex;
+    flex-direction: row-reverse;
     /* background-image: url(./images/Untitled-1-07.png); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    display: flex;
-    flex-direction: row-reverse;
 }
 
 .inner-section .section-info {
     width: 37.5%;
-    height: 100%;
     padding: 0 20px;
     background-color: rgba(255, 255, 255, 0.85);
     margin-right: 5%;
@@ -95,6 +94,7 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+
 }
 
 .inner-section .section-info .section-title {
@@ -206,7 +206,8 @@ body {
     background-color: #e2bd46;
     /* background-image: url(./images/Untitled-1-06.png); */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: center;
     margin-bottom: 50px;
 }
 
@@ -322,6 +323,10 @@ body {
 .btn-white a {
     color: #e2bd46;
     text-decoration: none;
+}
+
+.btn-white:hover {
+    background-color: rgb(238, 238, 238);
 }
 
 .drop-second-section {
@@ -492,6 +497,10 @@ body {
     margin-right: 0;
 }
 
+.btn-yellow:hover {
+    background-color: #cdac41;
+}
+
 .btn-yellow a {
     color: white;
     text-decoration: none;
@@ -528,6 +537,43 @@ body {
 
 .post-item:nth-of-type(2n) .post-drop-image {
     justify-content: start;
+}
+
+.meetings-section{
+    width:90%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.single-meeting{
+    width: 22.5%;
+    margin-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+    align-items: center;
+}
+
+.meeting-img img{
+    width: 100%;
+}
+
+.meeting-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+}
+
+.meeting-info .meeting-title {
+    font-size: 1.3rem;
+    /* color: #e2bd46; */
 }
 
 
