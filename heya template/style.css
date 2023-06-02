@@ -62,7 +62,7 @@ body {
 }
 
 #section-one {
-    background-color: grey;
+    /* background-color: grey; */
     background-image: url(./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -576,8 +576,63 @@ body {
     /* color: #e2bd46; */
 }
 
+#meeting-section-one {
+    background-color: #e2bd46;
+    height: 87.5vh;
+    display: flex;
+    background-image: url(./images/Untitled-1-07-2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 75%;
+}
 
+.single-meeting-section{
+    width: 85%;
+    height: 85.5%;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 100px
+}
 
+.single-meeting-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-meeting-img img {
+    height: 80%;
+}
+
+.single-meeting-title{
+    /* width: 40%; */
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    padding-right: 100px;
+}
+
+.single-meeting-title h1 {
+    margin: 0;
+}
+
+.single-meeting-title img{
+    width: 125px;
+}
+
+.single-meeting-body {
+    width: 75%;
+    margin: 100px auto;
+    text-align: right;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+}
 
 
 
