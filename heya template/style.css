@@ -647,6 +647,49 @@ body {
     line-height: 2.2rem;
 }
 
+.team-section {
+    width: 80%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    width: 27.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin: 25px auto;
+}
+
+.member-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 10px;
+    text-align: right;
+}
+
+.member-name {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #e2bd46;
+    text-decoration: underline;
+}
+
+.member-title {
+    font-size: .9rem;
+    /* font-weight: bold; */
+}
+
+.member-image img{
+    width: 175px;
+}
+
 
 
 
