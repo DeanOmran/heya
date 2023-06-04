@@ -157,7 +157,7 @@ body {
 .section-body .event {
     display: flex;
     width: 80%;
-    height: 400px;
+    /* height: 400px; */
     margin: auto;
 }
 
@@ -690,6 +690,18 @@ body {
     width: 175px;
 }
 
+@media only screen and (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
+    
+
+    .event {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
 
 
