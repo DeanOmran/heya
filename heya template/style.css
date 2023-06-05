@@ -851,4 +851,12 @@ body {
     .post-item:nth-of-type(2n) .post-drop-image {
         justify-content: center;
     }
+
+    .all-posts .section-title {
+        font-size: 2rem;
+    }
+
+    .single-meeting {
+        width: 40%;
+    }
 }
