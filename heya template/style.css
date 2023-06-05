@@ -696,7 +696,39 @@ body {
         overflow-x: hidden;
     }
 
-    
+    #section-one {
+        background-size: cover;
+    }
+
+    .inner-section {
+        background-image: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: auto;
+        height: 90vh;
+    }
+
+    .section-info {
+        width: 80% !important;
+        margin: auto;
+    }
+
+    .inner-section .section-info .section-title {
+        font-size: 2.8rem;
+        margin: auto;
+        line-height: 4rem;
+        padding-top: 20px;
+    }
+
+    .section-info .section-body  {
+        padding-bottom: 20px;
+    }
+
+    .section-info .section-body p {
+        font-size: .9rem;
+        line-height: 2rem;
+    }
 
     .event {
         flex-direction: column;

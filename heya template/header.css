@@ -152,7 +152,8 @@ a.icon {
 
 @media screen and (max-width: 768px) {
     .navbar {
-        height: 15vh;
+        height: 12.5vh;
+        background-color: whitesmoke;
     }
 
     .navbar-right {
