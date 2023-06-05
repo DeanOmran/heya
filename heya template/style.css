@@ -693,25 +693,28 @@ body {
 @media only screen and (max-width: 768px) {
 
     body {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
 
     #section-one {
         background-size: cover;
+        height: 75vh;
     }
 
+
     .inner-section {
-        background-image: none;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        width: auto;
-        height: 90vh;
+        background-image: none !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        width: auto !important;	
+        height: auto !important;
     }
+
 
     .section-info {
         width: 80% !important;
-        margin: auto;
+        margin: auto !important;
     }
 
     .inner-section .section-info .section-title {
@@ -756,6 +759,8 @@ body {
     .event-info {
         width: auto;
     }
+
+    
     
 
     .latest-drop {
@@ -780,8 +785,8 @@ body {
         width: auto !important;
     }
 
-    .drop-body .drop-title {
-        font-size: 1.25rem;
+    .drop-title {
+        font-size: 1.25rem !important;; 
     }
 
     .drop-body .drop-info .single-info {
@@ -865,4 +870,51 @@ body {
         margin: auto;
         width: 100% !important;
     }
+
+    .single-meeting-img img  {
+        height: 300px;
+    }
+
+    
+    .single-meeting-section {
+        background-image: none !important;
+        flex-direction: column-reverse !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: auto !important;	
+        height: auto !important;
+        gap: 25px;
+    }
+
+    #meeting-section-one {
+        background-size: cover;
+        height: 60vh;
+        background-image: none;
+    }
+
+    .single-meeting-title {
+        font-size: 1.5rem;
+        padding: 0;
+    }
+
+    .posts-section .post-item {
+        height: 60vh;
+        gap: 25px;
+    }
+
+    .team-section{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .team-member {
+        width: 40%;
+        flex-direction: column-reverse;
+
+    }
+
+    .member-image img {
+        width: 110%;
+    }
+
 }
