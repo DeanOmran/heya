@@ -730,8 +730,8 @@ body {
         line-height: 2rem;
     }
 
-    .latest-events .section-title,
-    .latest-drops .section-title-white {
+    .section-title,
+    .section-title-white {
         font-size: 3rem;
     }
 
@@ -756,6 +756,7 @@ body {
     .event-info {
         width: auto;
     }
+    
 
     .latest-drop {
         flex-direction: column;
@@ -798,5 +799,56 @@ body {
 
     .other-drops .other-drop-items {
         width: 30%;
+    }
+
+    /* posts page */
+
+    .all-posts-link {
+        width: 100%;
+    }
+
+    .all-posts-link a:nth-of-type(2n){
+        display: none;
+    }
+
+    .post-link-number {
+        font-size: 1rem;
+        padding: 2.5px 10px;
+    }
+
+    .post-item {
+        flex-direction: column;
+        background-image: none !important;
+        height: auto;
+    }
+
+    .post-item:nth-of-type(2n) {
+        flex-direction: column;
+        background-image: none !important;
+        padding:40px 0;
+    }
+
+
+    .post-drop-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .post-drop-body {
+        width: 80% !important;
+    }
+
+    .post-drop-body .drop-title {
+        font-size: 1.25rem;
+        margin-bottom: 20px;
+    }
+
+    .post-drop-body .drop-info .single-info {
+        height: 60px;
+    }
+
+    .post-item:nth-of-type(2n) .post-drop-image {
+        justify-content: center;
     }
 }
