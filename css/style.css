@@ -62,7 +62,7 @@ body {
 }
 
 #section-one {
-    background-image: url(./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg);
+    /* background-image: url(./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -75,10 +75,9 @@ body {
     width: 85%;
     height: 85.5%;
     margin: auto;
-    /* border: 4px solid white; */
     display: flex;
     flex-direction: row-reverse;
-    background-image: url(./images/Untitled-1-07.png);
+    /* background-image: url(./images/Untitled-1-07.png); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -222,7 +221,7 @@ body {
     align-items: center;
     gap: 75px;
     padding: 100px 0;
-    background-image: url(./images/Untitled-1-04.png);
+    /* background-image: url(./images/Untitled-1-04.png); */
     background-position: 90% 50%;
     background-repeat: no-repeat;
     background-size: 36%;
@@ -231,7 +230,7 @@ body {
 
 .latest-drop::before {
     content: "";
-    background-image: url(./images/white\ logo.png);
+    /* background-image: url("<?php echo get_temolate_directory_uri('./images/white\ logo.png')) ?>"); */
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -442,7 +441,7 @@ body {
     width: 100%;
     justify-content: center;
     text-align: right;
-    background-image: url(./images/Untitled-1-08.png);
+    /* background-image: url(./images/Untitled-1-08.png); */
     background-position: 22% 50%;
     background-repeat: no-repeat;
     background-size: 27%;
@@ -523,7 +522,7 @@ body {
     flex-direction: row-reverse;
     background-color: #e2bd46;
     gap: 75px;
-    background-image: url(./images/Untitled-1-04.png);
+    /* background-image: url(./images/Untitled-1-04.png); */
     background-position: 78% 50%;
     background-repeat: no-repeat;
     background-size: 27%;
@@ -532,7 +531,7 @@ body {
 
 .post-item:nth-of-type(2n)::before {
     content: "";
-    background-image: url(./images/white\ logo.png);
+    /* background-image: url(./images/white\ logo.png); */
     background-size: 85%;
     background-repeat: no-repeat;
     background-position: center;
