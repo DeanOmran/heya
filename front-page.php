@@ -1,12 +1,13 @@
 <?php get_header(); ?>
 
 <style>
-.latest-drop::before {
-    background-image: url("<?php echo get_theme_file_uri('./images/white\ logo.png') ?>");
-}
-.post-item:nth-of-type(2n)::before {
-    background-image: url("<?php echo get_theme_file_uri('./images/white\ logo.png') ?>");
-}
+    .latest-drop::before {
+        background-image: url("<?php echo get_theme_file_uri('./images/white\ logo.png') ?>");
+    }
+
+    .post-item:nth-of-type(2n)::before {
+        background-image: url("<?php echo get_theme_file_uri('./images/white\ logo.png') ?>");
+    }
 </style>
 
 <div id="section-one" class="container" style="background-image: url(<?php echo get_theme_file_uri('./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg') ?>);">
@@ -105,53 +106,61 @@
     </div>
     <div class="latest-drops-body">
         <div class="latest-drop" style="background-image: url(<?php echo get_theme_file_uri("./images/Untitled-1-04.png") ?>);">
-            <div class="drop-image">
-                <img src="<?php echo get_theme_file_uri("./images/70313769_2517550031673578_5717106554835042304_n.jpg") ?>" alt="" class="main-image">
-            </div>
-            <div class="drop-body">
-                <div class="drop-title">
-                    <h1>أجدد أعداد <br> مجلة هي واخواتها</h1>
-                    <img src="<?php echo get_theme_file_uri('./images/Untitled-1-03.png') ?>" alt="">
+            <?php
+            $latestPost = new WP_Query(array(
+                'posts_per_page' => 1
+            ));
+            while ($latestPost->have_posts()) {
+                $latestPost->the_post();
+            ?>
+                <div class="drop-image">
+                    <img src="<?php echo get_field('magazine_image') ?>" alt="" class="main-image">
                 </div>
-                <div class="drop-info">
-                    <div class="single-info">
-                        <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
-                        <p><span>عنوانه </span>عامٌ هجريٌ مبارك</p>
+                <div class="drop-body">
+                    <div class="drop-title">
+                        <h1>أجدد أعداد <br> مجلة هي واخواتها</h1>
+                        <img src="<?php echo get_theme_file_uri('./images/Untitled-1-03.png') ?>" alt="">
                     </div>
-                    <div class="single-info">
-                        <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
-                        <p><span>عدده </span>لعدد 47</p>
-                    </div>
-                    <div class="single-info">
-                        <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
-                        <p><span>تاريخ إصداره هجري/ميلادي </span>محمرم 1414 /أيلول 2019</p>
-                    </div>
-                    <div class="btn-white" style="margin-top: 50px;">
-                        <a href="">تحميل</a>
+                    <div class="drop-info">
+                        <div class="single-info">
+                            <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
+                            <p><span>عنوانه </span> <?php the_title(); ?> </p>
+                        </div>
+                        <div class="single-info">
+                            <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
+                            <p><span>عدده </span>العدد <?php echo get_field('magazine_number') ?></p>
+                        </div>
+                        <div class="single-info">
+                            <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
+                            <p><span>تاريخ إصداره هجري/ميلادي </span><?php echo get_field('release_date') ?></p>
+                        </div>
+                        <div class="btn-white" style="margin-top: 50px;">
+                            <a href="<?php echo get_field('magazine_pdf') ?>">تحميل</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            <?php }
+            wp_reset_query(); ?>
         </div>
         <div class="drop-second-section">
             <div class="other-drops">
-                <a href="" class="other-drop-items">
-                    <img src="<?php echo get_theme_file_uri('./images/41097884_1895103537251567_1591186491546009600_n.jpg') ?>" alt="">
-                </a>
-                <a href="" class="other-drop-items">
-                    <img src="<?php echo get_theme_file_uri('./images/41097884_1895103537251567_1591186491546009600_n.jpg') ?>" alt="">
-                </a>
-                <a href="" class="other-drop-items">
-                    <img src="<?php echo get_theme_file_uri('./images/41097884_1895103537251567_1591186491546009600_n.jpg') ?>" alt="">
-                </a>
-                <a href="" class="other-drop-items">
-                    <img src="<?php echo get_theme_file_uri('./images/41097884_1895103537251567_1591186491546009600_n.jpg') ?>" alt="">
-                </a>
-                <a href="" class="other-drop-items">
-                    <img src="<?php echo get_theme_file_uri('./images/41097884_1895103537251567_1591186491546009600_n.jpg') ?>" alt="">
-                </a>
+                <?php
+                $args = array(
+                    'post_type' => 'post',
+                    'posts_per_page' => 6,
+                    'offset' => 1
+                );
+                $query = new WP_Query($args);
+                while ($query->have_posts()) { ?>
+                    <?php $query->the_post(); ?>
+                    <a href="" class="other-drop-items">
+                        <img src="<?php echo get_field('magazine_image') ?>" alt="">
+                    </a>
+                <?php }
+                wp_reset_query(); ?>
             </div>
             <div class="btn-white">
-                <a href="">جميع الأعداد</a>
+                <a href="<?php echo site_url('/magazines') ?>">جميع الأعداد</a>
             </div>
         </div>
     </div>
@@ -163,7 +172,7 @@
         <img class="" src="<?php echo get_theme_file_uri('./images/Untitled-1-03.png') ?>" alt="">
     </div>
     <div class="latest-drops-body">
-        <div class="latest-drop" style="background-image: url(<?php echo get_theme_file_uri('./images/Untitled-1-04.png')?>) ;">
+        <div class="latest-drop" style="background-image: url(<?php echo get_theme_file_uri('./images/Untitled-1-04.png') ?>) ;">
             <div class="drop-image">
                 <img src="<?php echo get_theme_file_uri('./images/10930950_749664375128828_5486559389969704076_n.jpg') ?>" alt="" class="main-image" style="width: 65%;">
             </div>
