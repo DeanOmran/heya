@@ -153,7 +153,7 @@
                 $query = new WP_Query($args);
                 while ($query->have_posts()) { ?>
                     <?php $query->the_post(); ?>
-                    <a href="" class="other-drop-items">
+                    <a href="<?php echo the_permalink(); ?>" class="other-drop-items">
                         <img src="<?php echo get_field('magazine_image') ?>" alt="">
                     </a>
                 <?php }

@@ -73,6 +73,15 @@
             <a href="<?php echo the_permalink(); ?>">
                 <div class="post-link-number"><?php echo get_field('magazine_number') ?> العدد</div>
             </a>
+            <a href="<?php echo the_permalink(); ?>">
+                <div class="post-link-number"><?php echo get_field('magazine_number') ?> العدد</div>
+            </a>
+            <a href="<?php echo the_permalink(); ?>">
+                <div class="post-link-number"><?php echo get_field('magazine_number') ?> العدد</div>
+            </a>
+            <a href="<?php echo the_permalink(); ?>">
+                <div class="post-link-number"><?php echo get_field('magazine_number') ?> العدد</div>
+            </a>
         <?php } ?>
 
     </div>
