@@ -374,20 +374,39 @@ body {
 
 .all-posts-link {
     width: 80%;
-    margin: 0px auto;
+    margin: 50px auto;
     height: 100px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: end;
     flex-direction: row-reverse;
     align-items: center;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x proximity;
+}
+
+.all-posts-link::-webkit-scrollbar  {
+    /* display: none; */
+    background-color: rgb(219, 219, 219);
+    border-radius: 20px;
+}
+
+.all-posts-link::-webkit-scrollbar-thumb {
+    background-color: #e2be46ad;
+    border-radius: 20px;
 }
 
 .post-link-number {
     border: 2px solid rgb(170, 170, 170);
-    padding: 5px 20px;
+    padding: 0px 40px;
     text-align: center;
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
+    scroll-snap-align: center;
+    position: relative;
+    z-index: 1;
+    transition: opacity 0.3s ease-in;
+    margin: auto 20px;
 }
 
 .topic-link-no {
@@ -707,7 +726,7 @@ body {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: space-evenly !important;
-        width: auto !important;	
+        width: auto !important;
         height: auto !important;
     }
 
@@ -760,8 +779,8 @@ body {
         width: auto;
     }
 
-    
-    
+
+
 
     .latest-drop {
         flex-direction: column;
@@ -786,7 +805,8 @@ body {
     }
 
     .drop-title {
-        font-size: 1.25rem !important;; 
+        font-size: 1.25rem !important;
+        ;
     }
 
     .drop-body .drop-info .single-info {
@@ -796,6 +816,7 @@ body {
     .drop-second-section {
         height: auto;
     }
+
     .other-drops {
         height: auto;
         flex-wrap: wrap;
@@ -808,18 +829,18 @@ body {
 
     /* posts page */
 
-    .all-posts-link {
+    /* .all-posts-link {
         width: 100%;
     }
 
-    .all-posts-link a:nth-of-type(2n){
+    .all-posts-link a:nth-of-type(2n) {
         display: none;
     }
 
     .post-link-number {
         font-size: 1rem;
         padding: 2.5px 10px;
-    }
+    } */
 
     .post-item {
         flex-direction: column;
@@ -830,7 +851,7 @@ body {
     .post-item:nth-of-type(2n) {
         flex-direction: column;
         background-image: none !important;
-        padding:40px 0;
+        padding: 40px 0;
     }
 
 
@@ -871,17 +892,17 @@ body {
         width: 100% !important;
     }
 
-    .single-meeting-img img  {
+    .single-meeting-img img {
         height: 300px;
     }
 
-    
+
     .single-meeting-section {
         background-image: none !important;
         flex-direction: column-reverse !important;
         align-items: center !important;
         justify-content: center !important;
-        width: auto !important;	
+        width: auto !important;
         height: auto !important;
         gap: 25px;
     }
@@ -902,7 +923,7 @@ body {
         gap: 25px;
     }
 
-    .team-section{
+    .team-section {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
@@ -918,3 +939,4 @@ body {
     }
 
 }
+

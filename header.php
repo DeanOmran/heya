@@ -22,11 +22,11 @@
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
                 <div class="link-item">
-                    <a href="./posts.html">أعداد كاملة</a>
+                    <a href="<?php echo site_url('/magazines') ?>">أعداد كاملة</a>
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
                 <div class="link-item">
-                    <a href="#">الرّئيسية</a>
+                    <a href="<?php echo site_url('/') ?>">الرّئيسية</a>
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
             </div>

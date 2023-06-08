@@ -55,39 +55,26 @@
         <p>آخر المشاريع</p>
         <img class="" src="<?php echo get_theme_file_uri('./images/Untitled-1-01.png') ?>" alt="">
     </div>
+
+    <?php
+    $postNumber = new WP_Query(array(
+        'posts_per_page' => -1,
+        'meta_key' => 'magazine_number',
+        'orderby' => 'meta_value',
+        'order' => 'ASC'
+    ));
+    ?>
+
     <div class="all-posts-link">
-        <i class="arrow arrow-right"></i>
-        <a href="">
-            <div class="post-link-number">1 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">2 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">3 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">4 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">5 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">6 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">7 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">8 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">9 العدد</div>
-        </a>
-        <a href="">
-            <div class="post-link-number">10 العدد</div>
-        </a>
-        <i class="arrow arrow-left"></i>
+        <?php
+        while ($postNumber->have_posts()) {
+            $postNumber->the_post();
+        ?>
+            <a href="<?php echo the_permalink(); ?>">
+                <div class="post-link-number"><?php echo get_field('magazine_number') ?> العدد</div>
+            </a>
+        <?php } ?>
+
     </div>
     <div class="posts-section">
 
@@ -148,7 +135,7 @@
                                     } else {
                                         echo 'btn-white';
                                     } ?>" style="margin-top: 50px;">
-                            <a href="<?php echo get_field('magazine_pdf') ?>">تحميل</a> 
+                            <a href="<?php echo get_field('magazine_pdf') ?>">تحميل</a>
                         </div>
                     </div>
                 </div>
