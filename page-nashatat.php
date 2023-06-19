@@ -66,6 +66,9 @@ wp_reset_query(); ?>
         </div>
         <?php } wp_reset_query(); ?>
     </div>
+    <?php 
+        echo paginate_links();
+        ?>
 </div>
 
 <?php get_footer(); ?>

@@ -96,7 +96,7 @@ body {
 }
 
 .inner-section .section-info .section-title {
-    font-size: 4.75rem;
+    font-size: 4rem;
     font-weight: bold;
     color: var(--yellow);
     line-height: 6rem;
@@ -937,3 +937,115 @@ body {
     }
 
 }
+
+/* share button */
+
+.social-share {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .share-btn {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+  }
+  .share-btn .fa-share-alt {
+    margin-right: 2px;
+  }
+  .share-btn > i:hover {
+    color: #405de6;
+  }
+  .share-btn:active:not(:focus-within) {
+    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2) inset;
+  }
+  .share-btn:active:not(:focus-within) > i {
+    transform: translate(0.8px, 0.8px);
+  }
+  
+  .social {
+    box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -90px;
+    display: none;
+    justify-content: space-between;
+    background-color: white;
+    padding: 17px 50px;
+    border-radius: 50px;
+  }
+  .toggle input[type="checkbox"]:checked + .share-btn .social {
+    animation: fadeIn 1s;
+    display: flex;
+  }
+  .toggle input[type="checkbox"]:not(:checked) + .share-btn .social {
+    animation: fadeOut 1s;
+  }
+  
+  .toggle input[type="checkbox"]:checked + .share-btn .fa-share-alt {
+    display: none;
+  }
+  .toggle input[type="checkbox"]:not(:checked) + .share-btn .fa-times {
+    display: none;
+  }
+  .social a {
+    margin: 0 15px;
+    font-size: 32px;
+    color: #999;
+  }
+  .fa-twitter:hover {
+    color: rgb(29, 161, 242);
+  }
+  .fa-instagram-square:hover {
+    background: -webkit-linear-gradient(
+      #405de6,
+      #5851db,
+      #833ab4,
+      #c13584,
+      #e1306c,
+      #fd1d1d,
+      #f56040,
+      #f77737,
+      #fcaf45,
+      #ffdc80
+    );
+    /* -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+  }
+  .fa-vk:hover {
+    color: #4c75a3;
+  }
+  
+  .fa-behance-square:hover {
+    color: black;
+  }
+  
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }

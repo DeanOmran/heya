@@ -43,6 +43,21 @@
                             <a href="<?php echo get_field('magazine_pdf') ?>">تحميل</a>
                         </div>
                     </div>
+                    <div class="social-share">
+                            <label class="toggle" for="toggle">
+                                <input type="checkbox" id="toggle" />
+                                <div class="share-btn">
+                                    <i class="fas fa-share-alt"></i>
+                                    <i class="fas fa-times"></i>
+                                    <div class="social">
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-behance-square"></i></a>
+                                        <a href="#"><i class="fab fa-instagram-square"></i></i></a>
+                                        <a href="#"><i class="fab fa-vk"></i></a>
+                                    </div>
+                                </div>
+                            </label>
+                        </div>
                 </div>
             <?php }
             wp_reset_query(); ?>
