@@ -1,5 +1,15 @@
 <?php get_header(); ?>
 
+<style>
+    .latest-drop::before {
+        background-image: url("<?php echo get_theme_file_uri('./images/white\ logo.png') ?>");
+    }
+
+    .post-item:nth-of-type(2n)::before {
+        background-image: url("<?php echo get_theme_file_uri('./images/white\ logo.png') ?>");
+    }
+</style>
+
 
 <div class="latest-drops">
     <div class="latest-drops-body">
