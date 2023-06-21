@@ -32,11 +32,11 @@
             </div>
             <div class="links-left">
                 <div class="link-item">
-                    <a href="#">نشاطاتنا</a>
+                    <a href="<?php echo site_url('/nashatat') ?>">نشاطاتنا</a>
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
                 <div class="link-item">
-                    <a href="#">فريق العمل</a>
+                    <a href="<?php echo site_url('/team') ?>">فريق العمل</a>
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
             </div>

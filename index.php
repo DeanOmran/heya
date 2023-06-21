@@ -44,20 +44,20 @@
                         </div>
                     </div>
                     <div class="social-share">
-                            <label class="toggle" for="toggle">
-                                <input type="checkbox" id="toggle" />
-                                <div class="share-btn">
-                                    <i class="fas fa-share-alt"></i>
-                                    <i class="fas fa-times"></i>
-                                    <div class="social">
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fab fa-behance-square"></i></a>
-                                        <a href="#"><i class="fab fa-instagram-square"></i></i></a>
-                                        <a href="#"><i class="fab fa-vk"></i></a>
-                                    </div>
+                        <label class="toggle" for="toggle">
+                            <input type="checkbox" id="toggle" />
+                            <div class="share-btn">
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-times"></i>
+                                <div class="social">
+                                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&quote=<?php the_title(); ?>"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://twitter.com/intent/tweet?text=<?php echo the_title(); ?>&url=<?php the_permalink(); ?>"><i class="fab fa-twitter"></i></a>
+                                    <!-- <a href="#"><i class="fab fa-instagram-square"></i></i></a> -->
+                                    <a href="whatsapp://send?text=<?php the_permalink(); ?>"><i class="fab fa-whatsapp"></i></a>
                                 </div>
-                            </label>
-                        </div>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             <?php }
             wp_reset_query(); ?>
@@ -161,6 +161,21 @@
                                     } ?>" style="margin-top: 50px;">
                             <a href="<?php echo get_field('magazine_pdf') ?>">تحميل</a>
                         </div>
+                    </div>
+                    <div class="social-share">
+                        <label class="toggle" for="toggle">
+                            <input type="checkbox" id="toggle" />
+                            <div class="share-btn">
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-times"></i>
+                                <div class="social">
+                                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&quote=<?php the_title(); ?>"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://twitter.com/intent/tweet?text=<?php echo the_title(); ?>&url=<?php the_permalink(); ?>"><i class="fab fa-twitter"></i></a>
+                                    <!-- <a href="#"><i class="fab fa-instagram-square"></i></i></a> -->
+                                    <a href="whatsapp://send?text=<?php the_permalink(); ?>"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </label>
                     </div>
                 </div>
             </div>

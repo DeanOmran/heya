@@ -385,7 +385,7 @@ body {
     scroll-snap-type: x proximity;
 }
 
-.all-posts-link::-webkit-scrollbar  {
+.all-posts-link::-webkit-scrollbar {
     /* display: none; */
     background-color: rgb(219, 219, 219);
     border-radius: 20px;
@@ -726,7 +726,7 @@ body {
         flex-direction: column !important;
         align-items: center !important;
         justify-content: space-evenly !important;
-        width: auto !important;	
+        width: auto !important;
         height: auto !important;
     }
 
@@ -779,8 +779,8 @@ body {
         width: auto;
     }
 
-    
-    
+
+
 
     .latest-drop {
         flex-direction: column;
@@ -805,7 +805,8 @@ body {
     }
 
     .drop-title {
-        font-size: 1.25rem !important;; 
+        font-size: 1.25rem !important;
+        ;
     }
 
     .drop-body .drop-info .single-info {
@@ -815,6 +816,7 @@ body {
     .drop-second-section {
         height: auto;
     }
+
     .other-drops {
         height: auto;
         flex-wrap: wrap;
@@ -849,7 +851,7 @@ body {
     .post-item:nth-of-type(2n) {
         flex-direction: column;
         background-image: none !important;
-        padding:40px 0;
+        padding: 40px 0;
     }
 
 
@@ -890,17 +892,17 @@ body {
         width: 100% !important;
     }
 
-    .single-meeting-img img  {
+    .single-meeting-img img {
         height: 300px;
     }
 
-    
+
     .single-meeting-section {
         background-image: none !important;
         flex-direction: column-reverse !important;
         align-items: center !important;
         justify-content: center !important;
-        width: auto !important;	
+        width: auto !important;
         height: auto !important;
         gap: 25px;
     }
@@ -921,7 +923,7 @@ body {
         gap: 25px;
     }
 
-    .team-section{
+    .team-section {
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
@@ -943,9 +945,10 @@ body {
 .social-share {
     display: flex;
     flex-direction: column;
-  }
-  
-  .share-btn {
+    margin-left: 75px;
+}
+
+.share-btn {
     height: 70px;
     width: 70px;
     border-radius: 50%;
@@ -958,94 +961,105 @@ body {
     cursor: pointer;
     position: relative;
     background: #fff;
-  }
-  .share-btn .fa-share-alt {
+}
+
+.share-btn .fa-share-alt {
     margin-right: 2px;
-  }
-  .share-btn > i:hover {
+}
+
+.share-btn>i:hover {
     color: #405de6;
-  }
-  .share-btn:active:not(:focus-within) {
+}
+
+.share-btn:active:not(:focus-within) {
     box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.2) inset;
-  }
-  .share-btn:active:not(:focus-within) > i {
+}
+
+.share-btn:active:not(:focus-within)>i {
     transform: translate(0.8px, 0.8px);
-  }
-  
-  .social {
+}
+
+.social {
     box-shadow: 4px 2px 10px 1px rgba(0, 0, 0, 0.2);
     position: absolute;
-    top: -90px;
+    top: -80px;
     display: none;
     justify-content: space-between;
     background-color: white;
-    padding: 17px 50px;
+    padding: 10px 30px;
     border-radius: 50px;
-  }
-  .toggle input[type="checkbox"]:checked + .share-btn .social {
+}
+
+.toggle input[type="checkbox"]:checked+.share-btn .social {
     animation: fadeIn 1s;
     display: flex;
-  }
-  .toggle input[type="checkbox"]:not(:checked) + .share-btn .social {
+}
+
+.toggle input[type="checkbox"]:not(:checked)+.share-btn .social {
     animation: fadeOut 1s;
-  }
-  
-  .toggle input[type="checkbox"]:checked + .share-btn .fa-share-alt {
+}
+
+.toggle input[type="checkbox"]:checked+.share-btn .fa-share-alt {
     display: none;
-  }
-  .toggle input[type="checkbox"]:not(:checked) + .share-btn .fa-times {
+}
+
+.toggle input[type="checkbox"]:not(:checked)+.share-btn .fa-times {
     display: none;
-  }
-  .social a {
+}
+
+.social a {
     margin: 0 15px;
     font-size: 32px;
     color: #999;
-  }
-  .fa-twitter:hover {
+}
+
+.fa-twitter:hover {
     color: rgb(29, 161, 242);
-  }
-  .fa-instagram-square:hover {
-    background: -webkit-linear-gradient(
-      #405de6,
-      #5851db,
-      #833ab4,
-      #c13584,
-      #e1306c,
-      #fd1d1d,
-      #f56040,
-      #f77737,
-      #fcaf45,
-      #ffdc80
-    );
+}
+
+.fa-instagram-square:hover {
+    background: -webkit-linear-gradient(#405de6,
+            #5851db,
+            #833ab4,
+            #c13584,
+            #e1306c,
+            #fd1d1d,
+            #f56040,
+            #f77737,
+            #fcaf45,
+            #ffdc80);
     /* -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
-  }
-  .fa-vk:hover {
+}
+
+.fa-vk:hover {
     color: #4c75a3;
-  }
-  
-  .fa-behance-square:hover {
+}
+
+.fa-behance-square:hover {
     color: black;
-  }
-  
-  input[type="checkbox"] {
+}
+
+input[type="checkbox"] {
     display: none;
-  }
-  
-  @keyframes fadeIn {
+}
+
+@keyframes fadeIn {
     from {
-      opacity: 0;
+        opacity: 0;
     }
+
     to {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
-  @keyframes fadeOut {
+}
+
+@keyframes fadeOut {
     from {
-      opacity: 1;
+        opacity: 1;
     }
+
     to {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}

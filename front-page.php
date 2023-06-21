@@ -138,6 +138,21 @@
                             <a href="<?php echo get_field('magazine_pdf') ?>">تحميل</a>
                         </div>
                     </div>
+                    <div class="social-share">
+                        <label class="toggle" for="toggle">
+                            <input type="checkbox" id="toggle" />
+                            <div class="share-btn">
+                                <i class="fas fa-share-alt"></i>
+                                <i class="fas fa-times"></i>
+                                <div class="social">
+                                    <a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>&quote=<?php the_title(); ?>"><i class="fab fa-facebook"></i></a>
+                                    <a href="https://twitter.com/intent/tweet?text=<?php echo the_title(); ?>&url=<?php the_permalink(); ?>"><i class="fab fa-twitter"></i></a>
+                                    <!-- <a href="#"><i class="fab fa-instagram-square"></i></i></a> -->
+                                    <a href="whatsapp://send?text=<?php the_permalink(); ?>"><i class="fab fa-whatsapp"></i></a>
+                                </div>
+                            </div>
+                        </label>
+                    </div>
                 </div>
             <?php }
             wp_reset_query(); ?>
@@ -205,44 +220,30 @@
         <img class="" src="<?php echo get_theme_file_uri('./images/Untitled-1-01.png') ?>" alt="">
     </div>
     <div class="section-body">
-        <div class="event">
-            <div class="event-info">
-                <div class="event-title">
-                    آخر النشاطات 1
+        <?php
+        $latestNashatat = new WP_Query(array(
+            'post_type' => 'nashatat',
+            'posts_per_page' => 2
+        ));
+        while ($latestNashatat->have_posts()) {
+            $latestNashatat->the_post();
+        ?>
+            <div class="event">
+                <div class="event-info">
+                    <div class="event-title">
+                        <?php the_title(); ?>
+                    </div>
+                    <div class="event-content">
+                        <?php the_content(); ?>
+                    </div>
                 </div>
-                <div class="event-content">
-                    هعاقصلخهسقا لب مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس
-                    ثخلبكمهس يحل عشثنهخحينب ت علبت سيمهلس ثقخرى تؤ
-                    ﯨخسبارمخه سق ﯨرخنه عصثق اغبص ثﯩت بنع عهرلا صث قخ هعب يت
-                    رعاث صبه ع س ص قتل سق ﯨلارنتسيالر صثق الخ هعاقصلخهسقا لب
-                    مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس ثخلبكمهس يحلﯨتس ثخلبكمهس يحل
-                    عشثنهخحينب ت علبت سيمهلس ثقخرى
-                </div>
-            </div>
-            <div class="event-image">
-                <img class="evnt-img" src="<?php echo get_theme_file_uri('/images/Aurora carousel.jpg') ?>" alt="">
-                <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-info">
-                <div class="event-title">
-                    آخر النشاطات 2
-                </div>
-                <div class="event-content">
-                    هعاقصلخهسقا لب مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس
-                    ثخلبكمهس يحل عشثنهخحينب ت علبت سيمهلس ثقخرى تؤ
-                    ﯨخسبارمخه سق ﯨرخنه عصثق اغبص ثﯩت بنع عهرلا صث قخ هعب يت
-                    رعاث صبه ع س ص قتل سق ﯨلارنتسيالر صثق الخ هعاقصلخهسقا لب
-                    مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس ثخلبكمهس يحلﯨتس ثخلبكمهس يحل
-                    عشثنهخحينب ت علبت سيمهلس ثقخرى
+                <div class="event-image">
+                    <img class="evnt-img" src="<?php echo get_field('nashat_image'); ?>" alt="">
+                    <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png'); ?>" alt="">
                 </div>
             </div>
-            <div class="event-image">
-                <img class="evnt-img" src="<?php echo get_theme_file_uri('/images/Aurora carousel.jpg') ?>" alt="">
-                <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
-            </div>
-        </div>
+        <?php }
+        wp_reset_query(); ?>
     </div>
 </div>
 
