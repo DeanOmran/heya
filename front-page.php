@@ -10,28 +10,42 @@
     }
 </style>
 
-<div id="section-one" class="container" style="background-image: url(<?php echo get_theme_file_uri('./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg') ?>);">
-    <div class="inner-section" style="background-image: url(<?php echo get_theme_file_uri('./images/Untitled-1-07.png') ?>);">
-        <div class="section-info">
-            <div class="section-title">
-                عنوان موضوع الأسبوع
-            </div>
-            <div class="section-body">
-                <p>
-                    هعاقصلخهسقا لب مس يخلتاحخ هسي له سثخله ش
-                    ثاخع س ﯨتس ثخلبكمهس يحل عشثنهخحينب ت علبت
-                    سيمهلس ثقخرى تؤ ﯨخسبارمخه سق ﯨرخنه عصثق
-                    اغبص ثﯩت بنع عهرلا صث قخ هعب يت رعاث صبه ع س
-                    ص قتل سق ﯨلارنتسيالر صثق الخ مهصق اخب تسثق الخ مهصق اخب تسي
-                    بمن رمهصق اخب مهصق اخب
-                </p>
-                <div class="btn">
-                    <a href="">إقرأ المزيد</a>
+<?php $weeklyMawdoo3 = new WP_Query(array(
+    'post_type' => 'single-mawdoo3',
+    'posts_per_page' => 1,
+    'meta_query' => array(
+        array(
+            'key' => 'weekly_mawdoo3',
+            'value' => '1',
+            'compare' => '=='
+        )
+    )
+));
+
+while ($weeklyMawdoo3->have_posts()) {
+    $weeklyMawdoo3->the_post()
+?>
+
+    <div id="section-one" class="container" style="background-image: url(<?php echo get_theme_file_uri('./images/night-sky-2560x1440-night-city-earth-sky-stars-clouds-light-height-421.jpg') ?>);">
+        <div class="inner-section" style="background-image: url(<?php echo get_theme_file_uri('./images/Untitled-1-07.png') ?>);">
+            <div class="section-info">
+                <div class="section-title">
+                    الموضوع الاسبوعي
+                </div>
+                <div class="section-body">
+                    <p>
+                        <?php the_title(); ?>
+                    </p>
+                    <div class="btn">
+                        <a href="<?php echo the_permalink(); ?>">إقرأ المزيد</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
+<?php }
+wp_reset_query(); ?>
 
 <div class="latest-events">
     <div class="section-title">
