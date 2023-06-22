@@ -18,7 +18,7 @@
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
                 <div class="link-item">
-                    <a href="#">مواضيع متخصصة</a>
+                    <a href="<?php echo site_url('/mawadee3') ?>">مواضيع متخصصة</a>
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
                 <div class="link-item">
