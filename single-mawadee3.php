@@ -33,7 +33,7 @@
 <div class="all-posts">
     <div class="section-title">
         <p>جميع ال<?php the_title(); ?></p>
-        <img class="" src="./images/Untitled-1-01.png" alt="">
+        <img class="" src="<?php echo get_theme_file_uri('./images/Untitled-1-01.png'); ?>" alt="">
     </div>
     <div class="meetings-section">
 
