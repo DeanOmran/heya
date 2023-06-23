@@ -619,12 +619,12 @@ body {
 }
 
 .single-meeting-section {
-    width: 85%;
+    width: 90%;
     height: 85.5%;
     margin: auto;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     gap: 100px
 }
@@ -636,7 +636,7 @@ body {
 }
 
 .single-meeting-img img {
-    height: 80%;
+    width: 72.5%;
 }
 
 .single-meeting-title {

@@ -14,7 +14,7 @@
         <div class="navbar-left">
             <div class="links-right">
                 <div class="link-item">
-                    <a href="./meetings.html">مقابلات</a>
+                    <a href="<?php echo site_url('/mokabalat') ?>">مقابلات</a>
                     <img class="link-pic" src="./images/Untitled-1-01.png" alt="">
                 </div>
                 <div class="link-item">
