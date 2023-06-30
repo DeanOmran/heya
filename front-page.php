@@ -200,32 +200,54 @@ wp_reset_query(); ?>
         <p>مقابلات</p>
         <img class="" src="<?php echo get_theme_file_uri('./images/Untitled-1-03.png') ?>" alt="">
     </div>
-    <div class="latest-drops-body">
-        <div class="latest-drop" style="background-image: url(<?php echo get_theme_file_uri('./images/Untitled-1-04.png') ?>) ;">
-            <div class="drop-image">
-                <img src="<?php echo get_theme_file_uri('./images/10930950_749664375128828_5486559389969704076_n.jpg') ?>" alt="" class="main-image" style="width: 65%;">
-            </div>
-            <div class="drop-body">
-                <div class="drop-title">
-                    <h1>أجدد المقابلات</h1>
-                    <img src="<?php echo get_theme_file_uri('./images/Untitled-1-03.png') ?>" alt="">
+    <?php
+    $latestMokabala = new WP_Query(array(
+        'post_type' => 'mokabalat',
+        'posts_per_page' => 1
+    ));
+    while ($latestMokabala->have_posts()) {
+        $latestMokabala->the_post();
+    ?>
+        <div class="latest-drops-body">
+            <div class="latest-drop" style="background-image: url(<?php echo get_theme_file_uri('./images/Untitled-1-04.png') ?>) ;">
+                <div class="drop-image">
+                    <img src="<?php echo get_theme_file_uri('./images/10930950_749664375128828_5486559389969704076_n.jpg') ?>" alt="" class="main-image" style="width: 65%;">
                 </div>
-                <div class="drop-info">
-                    <div class="single-info">
-                        <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
-                        <p><span>مع </span>الشيخ زياد الصاحب</p>
+                <div class="drop-body">
+                    <div class="drop-title">
+                        <h1>أجدد المقابلات</h1>
+                        <img src="<?php echo get_theme_file_uri('./images/Untitled-1-03.png') ?>" alt="">
                     </div>
-                    <div class="single-info">
-                        <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
-                        <p><span>تاريخ إصداره هجري/ميلادي </span>محمرم 1414 /أيلول 2019</p>
-                    </div>
-                    <div class="btn-white" style="margin-top: 50px;">
-                        <a href="">إظهار</a>
+                    <div class="drop-info">
+                        <div class="single-info">
+                            <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
+                            <p><span><?php the_title(); ?></span></p>
+                        </div>
+                        <div class="single-info">
+                            <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
+                            <p><span>مع </span><?php
+                                                $mokabalaSheikh = get_field('mokabala_sheikh')[0];
+                                                if ($mokabalaSheikh) {
+                                                    $title = get_the_title($mokabalaSheikh->ID);
+                                                    echo esc_html($title);
+                                                } else {
+                                                    echo 'غير معروف';
+                                                }
+                                                ?></p>
+                        </div>
+                        <div class="single-info">
+                            <img src="<?php echo get_theme_file_uri('./images/Path 10.png') ?>" alt="">
+                            <p><span>تاريخ المقابلة هجري/ميلادي </span><?php echo get_field('mokabala_date'); ?></p>
+                        </div>
+                        <div class="btn-white" style="margin-top: 50px;">
+                            <a href="<?php the_permalink(); ?>">إظهار</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    <?php }
+    wp_reset_query(); ?>
 </div>
 
 <div class="latest-events">
