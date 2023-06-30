@@ -71,10 +71,12 @@ wp_reset_query(); ?>
                         <?php echo wp_trim_words(get_the_content(), 50); ?>
                     </div>
                 </div>
+                <a href="<?php the_permalink(); ?>">
                 <div class="event-image">
                     <img class="evnt-img" src="<?php echo get_field('single_mawdoo3_image') ?>" alt="">
                     <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
                 </div>
+                </a>
             </div>
 
         <?php }
