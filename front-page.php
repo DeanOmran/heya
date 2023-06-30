@@ -49,67 +49,36 @@ wp_reset_query(); ?>
 
 <div class="latest-events">
     <div class="section-title">
-        <p>آخر المشاريع</p>
+        <p>آخر المواضيع</p>
         <img class="" src="<?php echo get_theme_file_uri('./images/Untitled-1-01.png') ?>" alt="">
     </div>
     <div class="section-body">
-        <div class="event">
-            <div class="event-info">
-                <div class="event-title">
-                    آخر المشاريع 1
+        <?php
+        $postNumber = new WP_Query(array(
+            'post_type' => 'single-mawdoo3',
+            'posts_per_page' => 3,
+        ));
+        while ($postNumber->have_posts()) {
+            $postNumber->the_post();
+        ?>
+
+            <div class="event">
+                <div class="event-info">
+                    <div class="event-title">
+                        <?php the_title(); ?>
+                    </div>
+                    <div class="event-content">
+                        <?php echo wp_trim_words(get_the_content(), 50); ?>
+                    </div>
                 </div>
-                <div class="event-content">
-                    هعاقصلخهسقا لب مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس
-                    ثخلبكمهس يحل عشثنهخحينب ت علبت سيمهلس ثقخرى تؤ
-                    ﯨخسبارمخه سق ﯨرخنه عصثق اغبص ثﯩت بنع عهرلا صث قخ هعب يت
-                    رعاث صبه ع س ص قتل سق ﯨلارنتسيالر صثق الخ هعاقصلخهسقا لب
-                    مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس ثخلبكمهس يحلﯨتس ثخلبكمهس يحل
-                    عشثنهخحينب ت علبت سيمهلس ثقخرى
-                </div>
-            </div>
-            <div class="event-image">
-                <img class="evnt-img" src="<?php echo get_theme_file_uri('./images/Aurora carousel.jpg') ?>" alt="">
-                <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-info">
-                <div class="event-title">
-                    آخر المشاريع 2
-                </div>
-                <div class="event-content">
-                    هعاقصلخهسقا لب مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس
-                    ثخلبكمهس يحل عشثنهخحينب ت علبت سيمهلس ثقخرى تؤ
-                    ﯨخسبارمخه سق ﯨرخنه عصثق اغبص ثﯩت بنع عهرلا صث قخ هعب يت
-                    رعاث صبه ع س ص قتل سق ﯨلارنتسيالر صثق الخ هعاقصلخهسقا لب
-                    مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس ثخلبكمهس يحلﯨتس ثخلبكمهس يحل
-                    عشثنهخحينب ت علبت سيمهلس ثقخرى
+                <div class="event-image">
+                    <img class="evnt-img" src="<?php echo get_field('single_mawdoo3_image') ?>" alt="">
+                    <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
                 </div>
             </div>
-            <div class="event-image">
-                <img class="evnt-img" src="<?php echo get_theme_file_uri('./images/Aurora carousel.jpg') ?>" alt="">
-                <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
-            </div>
-        </div>
-        <div class="event">
-            <div class="event-info">
-                <div class="event-title">
-                    آخر المشاريع 3
-                </div>
-                <div class="event-content">
-                    هعاقصلخهسقا لب مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس
-                    ثخلبكمهس يحل عشثنهخحينب ت علبت سيمهلس ثقخرى تؤ
-                    ﯨخسبارمخه سق ﯨرخنه عصثق اغبص ثﯩت بنع عهرلا صث قخ هعب يت
-                    رعاث صبه ع س ص قتل سق ﯨلارنتسيالر صثق الخ هعاقصلخهسقا لب
-                    مس يخلتاحخ هسي له سثخله ش ثاخع س ﯨتس ثخلبكمهس يحلﯨتس ثخلبكمهس يحل
-                    عشثنهخحينب ت علبت سيمهلس ثقخرى
-                </div>
-            </div>
-            <div class="event-image">
-                <img class="evnt-img" src="<?php echo get_theme_file_uri('./images/Aurora carousel.jpg') ?>" alt="">
-                <img class="event-flower" src="<?php echo get_theme_file_uri('./images/Untitled-1-02.png') ?>" alt="">
-            </div>
-        </div>
+
+        <?php }
+        wp_reset_query(); ?>
     </div>
 </div>
 
